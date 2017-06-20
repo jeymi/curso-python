@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
 	args = parser.parse_args()
 
-	datos = {'ama':{'ana','jose'}}
+	datos = {'nombre':{'ana','jose'}}
     #args.nombre
 
     # si ana esta en datos
