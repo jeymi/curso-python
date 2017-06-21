@@ -1,5 +1,5 @@
 import random
-
+mensaje= "el {0} de {1} de edad, es de la ciudad de {2} y cursa {3} en la universidad"
 NOMBRES = [
     'Ana',
     'Pedro',
@@ -31,7 +31,7 @@ def generar_diccionario_estudiantes():
         estudiantes[nombre] = {
             'edad': random.randrange(16, 30),
             'anio': random.randrange(1, 5),
-            'cuidad': random.choice(CIUDADES)
+            'ciudad': random.choice(CIUDADES)
         }
     return estudiantes
 
@@ -40,3 +40,9 @@ if __name__ == '__main__':
  
     for llave,valor in diccio.iteritems() :
         print llave,valor
+if __name__ == '__main__':
+    for llave,valor in diccio.iteritems():
+        print mensaje.format(llave,valor['edad'],valor['ciudad'],valor['anio'])
+if __name__ == '__main__':
+    
+    
