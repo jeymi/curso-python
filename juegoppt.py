@@ -1,20 +1,99 @@
-from argparse import variable
-contador1=0
-contador2=0
-d = {'piedra':
-{ 'piedra': False,'papel':False,'tijera':True},
-'papel':
-{'piedra':True,'papel':False,'tijera':False},
-'tijera':
-{'piedra':False,'papel':True,'tijera':False}}
+import random
+from time import sleep
+print ("Bienvenido, vamos a jugar a Piedra, papel o tijera.")
+print ("")
+sleep(2)
+print ("Jugar al mejor de tres, o prefieres elegir?")
+sleep(1)
+print ("")
+#Funcion que realiza la lógica del juego
+def juego(intentos):
+ x = 0
+ tu = 0
+ pc = 0
+ while str(x) != intentos:
+  print ("Piedra, papel o tijera?")
+  opcion = input()
+  opcion = opcion.lower()
+  azar = random.choice(["piedra", "papel", "tijera"])
+  if opcion == azar:
+   print ("La pc obtuvo tambien", azar)
+   print ("")
+  elif azar == "tijera" and opcion == "papel":
+   x += 1
+   pc += 1
+   print ("El PC selecciono", azar)
+   print ("Tu", tu, "PC", pc)
+   print ("")
+  elif azar == "tijera" and opcion == "piedra":
+   x += 1
+   tu += 1
+   print ("El PC selecciono", azar)
+   print ("Tu", tu, "PC", pc)
+   print ("")
+  elif azar == "piedra" and opcion == "tijera":
+   x += 1
+   pc += 1
+   print ("El PC selecciono", azar)
+   print ("Tu", tu, "PC", pc)
+   print ("")
+  elif azar == "piedra" and opcion == "papel":
+   x += 1
+   tu += 1
+   print ("El PC selecciono", azar)
+   print ("Tu", tu, "PC", pc)
+   print ("")
+  elif azar == "papel" and opcion == "tijera":
+   x += 1
+   tu += 1
+   print ("El PC selecciono", azar)
+   print ("Tu", tu, "PC", pc)
+   print ("")
+  elif azar == "papel" and opcion == "piedra":
+   x += 1
+   pc += 1
+   print ("El PC selecciono", azar)
+   print ("Tu", tu, "PC", pc)
+   print ("")
+  else:
+   print ("Opcion incorrecta, vuleva a intentarlo")
+ 
+ print ("")
+ 
+ if pc > tu:
+  print ("Gano el PC", pc, "a", tu)
+ elif pc == tu:
+  print ("Empate", tu, "a", pc)
+ else:
+  print ("Ganaste", tu, "a", pc)
+ 
+ print ("")
+ print ("PARTIDA TERMINADA")
+ 
+  
+def main():
+ print ("Escribe 1 para jugar al mejor de tres.")
+ print ("Escribe 2 para cambiar el tipo de juego.")
 
-while contador1<3 or contador2<3:
-	parser= argparse.argumentparsert('valor')
-	args= arg_parser()
-	random.choice(list(d.keys()))
+ opcion = input()
 
-
-
-	
-
+ if opcion == 1:
+  juego("3")
+  print ("")
+  restart = input("Quieres jugar de nuevo?(s/n): ")
+  restart = restart.lower()
+  if restart == "s":
+   print ("")
+   main()
+ else:
+  intentos = input("jugamos al mejor de: ")
+  juego(intentos)
+  print ("")
+  restart = input("Quieres jugar de nuevo?(s/n): ")
+  restart = restart.lower()
+  if restart == "s":
+   print ("")
+   main()
+  else:
+   print ("FIN")
 
