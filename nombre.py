@@ -8,21 +8,13 @@ if __name__ == '__main__':
 	args = parser.parse_args()
 
 	datos = {'nombre':{'ana','jose'}}
-    #args.nombre
-
-    # si ana esta en datos
-    #if args.nombre in datos:
-
-        #print('la llave',args.nombre,'no existe en el diccionario')
-	#else
-        #print('la llave',args.nombre,'si existe en el diccionario')	
 			
 		
 
 	for llave,valor in datos.iteritems():
 		if args.nombre == llave :
-			print('la llave',args.nombre,'no existe en el diccionario')
+			print('la llave',args.nombre,'si existe en el diccionario')
 		else:
-		    print('la llave',args.nombre,'si existe en el diccionario')	
+		    print('la llave',args.nombre,'no existe en el diccionario')	
 			
 		
