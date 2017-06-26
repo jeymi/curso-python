@@ -40,9 +40,19 @@ if __name__ == '__main__':
  
     for llave,valor in diccio.iteritems() :
         print llave,valor
-if __name__ == '__main__':
+
     for llave,valor in diccio.iteritems():
         print mensaje.format(llave,valor['edad'],valor['ciudad'],valor['anio'])
-if __name__ == '__main__':
-    
-    
+    print 'estudiantes de managua'
+    for llave,valor in diccio.iteritems():
+        if valor['ciudad'] == 'Managua':
+            print mensaje.format(llave,valor['edad'],valor['ciudad'],valor['anio'])
+    print 'estudiantes de masaya que cursan 1er anio'
+    for llave,valor in diccio.iteritems():
+        if valor['ciudad'] == 'Masaya' and valor['anio'] == 1:
+            print mensaje.format(llave, valor['edad'], valor['ciudad'], valor['anio'])
+    print 'estudiantes menores de 21'
+    for llave,valor in diccio.iteritems():
+        if valor['edad']<21:
+            msj = 'el {0} de {1}, es de la ciudad de {2} y cursa {3} de la universidad'
+            print msj.format(llave,valor['edad'],valor['ciudad'],valor['anio'])
