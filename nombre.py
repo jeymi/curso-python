@@ -10,11 +10,15 @@ if __name__ == '__main__':
 	datos = {'nombre':{'ana','jose'}}
 			
 		
+    if args.nombre in datos:
+
 
 	for llave,valor in datos.iteritems():
 		if args.nombre == llave :
-			print('la llave',args.nombre,'si existe en el diccionario')
+			mensaje = 'la llave {0} si existe en el diccionarios'
+			print mensaje.format(args.nombre)
 		else:
-		    print('la llave',args.nombre,'no existe en el diccionario')	
+			msj = 'la llave {0} no existe en el diccionario'
+		    print msj.format(args.nombre)
 			
 		
