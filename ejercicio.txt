@@ -3,3 +3,9 @@ el estudiante Ana de 18 de edad, es de la ciudad de Masaya y cursa 4 en la unive
 el estudiante Ariel de 20 de edad, es de la ciudad de Chinandega y cursa 4 en la universidad 
 el estudiante Oscar de 20 de edad, es de la ciudad de Managua y cursa 4 en la universidad 
 el estudiante Ernesto de 19 de edad, es de la ciudad de Managua y cursa 4 en la universidad 
+el estudiante Ana de 19 de edad, es de la ciudad de Chinandega y cursa 3 en la universidad 
+el estudiante Brenda de 17 de edad, es de la ciudad de Rivas y cursa 2 en la universidad 
+el estudiante Ariel de 20 de edad, es de la ciudad de Somoto y cursa 3 en la universidad 
+el estudiante Oscar de 17 de edad, es de la ciudad de Masaya y cursa 4 en la universidad 
+el estudiante Ernesto de 20 de edad, es de la ciudad de Somoto y cursa 1 en la universidad 
+el estudiante Luis de 20 de edad, es de la ciudad de Rivas y cursa 2 en la universidad 
