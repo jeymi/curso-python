@@ -21,6 +21,11 @@ class Mi_Ventana(Gtk.Window):
 		self.contenedor = Gtk.Grid()
 		self.contenedor.set_column_homogeneous(True)
 		self.add(self.contenedor)
+	def agregar_contenedor2(self):
+		self.contenedor2 = Gtk.Grid()
+		self.contenedor2.set_column_homogeneous(True)
+		self.add(self.contenedor2)
+
 	def agregar_entrada(self):
 		self.entrada = Gtk.Entry()
 		self.contenedor.attach(self.entrada,0,0,3,1)
@@ -37,18 +42,18 @@ class Mi_Ventana(Gtk.Window):
 			self.boton,
 			self.entrada,
 			Gtk.PositionType.BOTTOM,
-			4,
-			1,
+			2,
+			2,
 			)
 		self.boton.connect('clicked',self.agregar_fila)
 	def agregar_bton2(self):
-		self.boton = Gtk.Button('pasivos')
+		self.boton2 = Gtk.Button('pasivos')
 		self.contenedor.attach_next_to(
-			self.boton,
+			self.boton2,
 			self.entrada,
 			Gtk.PositionType.BOTTOM,
-			4, 
-			4,
+			5, 
+			2,
 			)
 		self.boton.connect('clicked',self.agregar_fila2)
 	def agregar_lista(self):
@@ -70,6 +75,25 @@ class Mi_Ventana(Gtk.Window):
 			4,
 			1
 			)
+	def agregar_lista2(self):
+		self.modelo2 = Gtk.ListStore(str,float)
+		self.lista_pasivos = Gtk.TreeView(self.modelo2)
+  
+		descripcion = Gtk.CellRendererText()
+		columna_descripcion =  Gtk.TreeViewColumn('descripcion',descripcion,text=2)
+		monto = Gtk.CellRendererText()
+		columna_monto =  Gtk.TreeViewColumn('Monto',monto,text=3)
+
+		self.lista_pasivos.append_column(columna_descripcion)
+		self.lista_pasivos.append_column(columna_monto)
+
+		self.contenedor2.attach_next_to(
+			self.lista_pasivos,
+			self.boton2,
+			Gtk.PositionType.BOTTOM,
+			5,
+			1
+			)
 
 	def agregar_fila(self,btn):
 		texto = self.entrada.get_text()
@@ -78,7 +102,7 @@ class Mi_Ventana(Gtk.Window):
 	def agregar_fila2(self,btn):
 		texto = self.entrada.get_text()
 		num = self.entrada2.get_text()
-		self.modelo.append([texto,float(num)])
+		self.modelo2.append([texto,float(num)])
 if __name__ == '__main__':
 	ventana = Mi_Ventana()
 	ventana.show_all()
