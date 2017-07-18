@@ -3,12 +3,12 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-class Mi_Ventana(Gtk.Window):
+class Mi_Ventana(Gtk.ApplicationWindow):
 	def __init__(self, *args, **kwargs):
 		
 		super(Mi_Ventana, self).__init__(*args, **kwargs)
 		self.set_size_request(500, 300)
-		self.connect('delete-event', Gtk.main_quit)
+		#self.connect('delete-event', Gtk.main_quit)
 
 		self.agregar_contenedor()
 		self.agregar_entrada()
@@ -97,4 +97,4 @@ class Mi_Ventana(Gtk.Window):
 if __name__ == '__main__':
 	ventana = Mi_Ventana()
 	ventana.show_all()
-Gtk.main()
+	Gtk.main()
