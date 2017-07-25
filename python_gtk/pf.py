@@ -119,9 +119,9 @@ class continentes(Gtk.Window):
        			self.modelo.append([' 1 735 000.'])
        			self.modelo.append([' 3 487 000.'])
        			self.modelo.append([' 31 236 000.'])
-       def lista_poblacion_europa(self,btn=None):
-       	if len(self.modelo) ==0:
-       		self.modelo.append([' 2 874 000.'])
+    def lista_poblacion_europa(self,btn=None):
+    	if len(self.modelo) ==0:
+    		self.modelo.append([' 2 874 000.'])
 	       	self.modelo.append([' 82 605 000.'])
 	       	self.modelo.append([' 79 000.'])
 	       	self.modelo.append([' 2 993 000.'])
@@ -160,17 +160,18 @@ class continentes(Gtk.Window):
 	       	self.modelo.append([' 5 265 000.'])
 	       	self.modelo.append([' 17 095 000.'])
 	       	self.modelo.append([' 38 370 000'])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
-	       	self.modelo.append([' '])
+	       	self.modelo.append([' 10 265 000.'])
+	       	self.modelo.append([' 65 893 000.'])
+	       	self.modelo.append([' 10 573 000.'])
+	       	self.modelo.append([' 19 659 000.'])
+	       	self.modelo.append([' 146 823 000.'])
+	       	self.modelo.append([' 33 000.'])
+	       	self.modelo.append([' 7 056 000.'])
+	       	self.modelo.append([' 9 977 000.'])
+	       	self.modelo.append([' 8 402 000.'])
+	       	self.modelo.append([' 79 806 000.'])
+	       	self.modelo.append([' 42 594 000.'])
+       		
 if __name__ == '__main__':
 	ventana = continentes()
 	ventana.show_all()
